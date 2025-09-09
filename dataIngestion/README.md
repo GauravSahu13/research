@@ -12,6 +12,24 @@ This module contains the complete arXiv paper processing pipeline using LangGrap
 ## Features
 
 ### 🤖 Multi-Agent Workflow
+
+```mermaid
+graph TD
+    A[__start__] --> B[ArxivFetcherAgent]
+    B --> C[PaperDownloaderAgent]
+    C --> D[ContentExtractorAgent]
+    D --> E[ImageViewerAgent]
+    E --> F[SummaryAgent]
+    F --> G[__end__]
+    
+    B1[🔍 Search arXiv<br/>Get paper metadata] --> B
+    C1[📥 Download PDFs<br/>Save locally] --> C
+    D1[🔧 Extract Content<br/>Text, Images, Tables] --> D
+    E1[🖼️ Display Images<br/>Show with captions] --> E
+    F1[📊 Generate Summary<br/>Save results] --> F
+```
+
+**Workflow Description:**
 ```
 START → ArxivFetcherAgent → PaperDownloaderAgent → ContentExtractorAgent → ImageViewerAgent → SummaryAgent → END
 ```
