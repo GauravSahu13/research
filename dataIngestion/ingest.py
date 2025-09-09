@@ -120,7 +120,7 @@ Examples:
         print_usage()
         sys.exit(1)
     
-    if args.max_papers < 1 or args.max_papers > 20:
+    if args.max_papers < 1 or args.max_papers > 200:
         print("❌ Error: max-papers must be between 1 and 20")
         sys.exit(1)
     
