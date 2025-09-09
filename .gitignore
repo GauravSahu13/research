@@ -109,8 +109,10 @@ table_*.xlsx
 *.csv
 *.xlsx
 
-# Markdown files (extracted text)
+# Markdown files (extracted text) - but keep README files
 *.md
+!README.md
+!**/README.md
 
 # Conda
 .conda/
